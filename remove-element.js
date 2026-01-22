@@ -1,7 +1,7 @@
 //January 22, 2026 #27 Remove Element
 
 /* INSTRUCTIONS
-Given an integer array and a value remove all occurrences of the value in the array IN-PLACE. 
+Given an integer array and a value remove all occurrences of the value in the array IN-PLACE (do not create a new array, you must use the existing nums)
 The order of elements may be changed.
 Return the number of elements in the array which are not equal to val 
 */
