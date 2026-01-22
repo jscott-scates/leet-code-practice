@@ -21,6 +21,7 @@ var majorityElement = function(nums){
         }
     }
 
+    //For each element in the unduplicated list, run through each element in the nums list and if the values are equal increase a counter by 1
     for (let j = 0; j < unduplicatedNums.length; j++){
         let localCount = 0
         for (let i = 0; i < nums.length; i++){
@@ -29,7 +30,7 @@ var majorityElement = function(nums){
             }
         }
         if (localCount > n){
-            majorityNum = unduplicatedNums[j]
+            majorityNum = unduplicatedNums[j] //if localcount > n than you know that you have the majority number
         }
     }
 
@@ -37,4 +38,25 @@ var majorityElement = function(nums){
     
 }
 
-console.log(majorityElement(nums))
+majorityElement(nums)
+
+//Solve the problem in linear time O(n) and O(1) space
+var majorityElementTimeSpaceConsiderations = function(nums){
+    let count = 0 
+    let majorityCandiate = null;
+
+    for (num of nums){
+        if (count === 0){
+            majorityCandiate = num;
+        }
+
+        count += (num === majorityCandiate) ? 1: -1;
+    }
+
+    return majorityCandiate;
+}
+
+console.log(majorityElementTimeSpaceConsiderations(nums))
+
+//O(n) time because we only have one loop occuring rather than the previous solution which had nested loops that increased the time spent processing
+//O(1) space because we created two variables that stored values that were temporary and went away once the function finished executing. 
