@@ -12,7 +12,7 @@ let nums = [3,2,3]
 var majorityElement = function(nums){
     let n = nums.length / 2 //allows us to later compare the count of specific instances of an element to see if it is the majority
     let unduplicatedNums = []
-    let majorityNum = 0
+    let majorityNum = null
 
     //Creates an unduplicated numbers list
     for (let i = 0; i < nums.length; i++){
