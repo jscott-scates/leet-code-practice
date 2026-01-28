@@ -10,13 +10,13 @@ let needle = "lo";
 let haystack = "hello";
 
 var strStr = function (haystack, needle) {
-    let haystackArray = haystack.split("");
-    let needleArray = needle.split("");
+    let haystackArray = haystack.split('');
+    let needleArray = needle.split('');
 
     for (let i=0; i < haystackArray.length; i++){
         let comparisonValue = ""
         for (let j=i; j < i + needleArray.length; j++){
-            comparisonValue+= haystackArray[j]
+            comparisonValue+= haystackArray[j];
         }
         if (comparisonValue === needle){
             return i
