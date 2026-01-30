@@ -26,3 +26,20 @@ var reverseWords = function(s){
 }
 
 reverseWords(string)
+
+//Bonus question from Graham reverse the string in it's entirity, including the letters and spaces.
+
+var reverseString = function(s){
+    let reversedString = ''
+    let arrayOfLetters = s.trim().split('')
+
+    console.log(arrayOfLetters)
+
+    for (let i = arrayOfLetters.length - 1; i >= 0; i--){
+        reversedString += arrayOfLetters[i]
+    }
+    console.log(reversedString)
+    return reversedString
+}
+
+reverseString(string)
