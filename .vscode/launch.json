@@ -12,7 +12,7 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}/reverse-words-in-string.js"
+            "program": "${workspaceFolder}/best-time-to-buy-and-sell-stocks-2.js"
         }
     ]
 }
